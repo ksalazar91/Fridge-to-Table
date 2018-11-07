@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-orange.min.css" />
+        <script src="https://developer.edamam.com/attribution/badge.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+        <title>Fridge to Table </title>
+    </head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="logo">
+            <img id="logo" src="assets/images/LogoImage.png">
+        </div>
+        <div class="col-lg-12">
+            <h2>Fridge To Table</h2>
+            <nav class="demo-navigation mdl-navigation" id="menu">
+                <a class="mdl-navigation__link" href="user.html">
+                    <i class="material-icons">account_circle</i>User Profile</a>
+
+                <a class="mdl-navigation__link" href="aneesTest.html">
+                    <i class="material-icons">restaurant_menu</i>Recipes</a>
+                     <div class="mdl-layout-spacer"></div>
+                <a id="show-dialog" class="mdl-navigation__link">
+                    <i class="material-icons" role="presentation">cancel</i>Log Out</a>
+                <dialog class="mdl-dialog">
+                    <h4 class="mdl-dialog__content">Are you sure you want to log out?</h4>
+                    <div class="mdl-dialog__actions">
+                        <button type="button" class="mdl-button mdl-button--accent" onclick="dialog.close()">No</button>
+                        <button type="button" class="mdl-button close">Yes</button>
+                    </div>
+                </dialog>
+                <script>
+                </script>
+            </nav>
+        </div>
+        </div>
+        </div>
+    </nav>
+    <div class="bigContainer">
+        <!-- <div class="sideBar">
+            <div class="container"> -->
+        <div class="row">
+            <div class="col-lg-2" id="side-panel">
+                <form class="input-group">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" id='input-search'>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id='search-button'>Search</button>
+                </form>
+                <button class='btn btn-outline-success my-2 my-sm-0' type='button' id='youtube-button'>Youtube Button</button>
+                <div id="buttons"></div>
+                <div class="gif-view"></div>
+                <div class="card">
+                    <article class="card-group-item">
+                        <header class="card-header">
+                            <h6 class="title">Produce </h6>
+                        </header>
+                        <div class="filter-content">
+                            <div class="card-body">
+                                <form>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Artichoke
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Asparagus
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Beans
+                                        </span>
+                                    </label>
+                                    <label class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="">
+                                            <span class="form-check-label">
+                                                Brussel Sprouts
+                                            </span>
+                                        </label>
+                                    <label class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="">
+                                            <span class="form-check-label">
+                                                Cauliflower
+                                            </span>
+                                        </label>
+                                        <label class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <span class="form-check-label">
+                                                    Celery
+                                                </span>
+                                                </label>
+                                                <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="">
+                                                        <span class="form-check-label">
+                                                            lettuce
+                                                        </span>
+                                                    </label>
+                                                    <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                            <span class="form-check-label">
+                                                                Spinach
+                                                            </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                                <span class="form-check-label">
+                                                                    Onion
+                                                                </span>
+                                                            </label>
+                                                            <label class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="">
+                                                                    <span class="form-check-label">
+                                                                        Carrot
+                                                                    </span>
+                                                                </label>
+                                    <!-- form-check.// -->
+                                </form>
+                            </div>
+                            <!-- card-body.// -->
+                        </div>
+                    </article>
+                    <!-- card-group-item.// -->
+                    <article class="card-group-item">
+                        <header class="card-header">
+                            <h6 class="title">Dairy </h6>
+                        </header>
+                        <div class="filter-content">
+                            <div class="card-body">
+                                <form>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Milk
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Cheese
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Butter
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                </form>
+                            </div>
+                            <!-- card-body.// -->
+                        </div>
+                    </article>
+                    <article class="card-group-item">
+                        <header class="card-header">
+                            <h6 class="title">Meat </h6>
+                        </header>
+                        <div class="filter-content">
+                            <div class="card-body">
+                                <form>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Pork
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Chicken
+                                        </span>
+                                    </label>
+                                    <!-- form-check.// -->
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Fish
+                                        </span>
+                                    </label>
+                                    <label class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="">
+                                            <span class="form-check-label">
+                                                Lamb
+                                            </span>
+                                        </label>
+                                        <label class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <span class="form-check-label">
+                                                    Red Meat
+                                                </span>
+                                            </label>
+                                            <label class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-label">
+                                                        Turkey
+                                                    </span>
+                                                </label>
+                                    <!-- form-check.// -->
+                                </form>
+                            </div>
+                            <!-- card-body.// -->
+                        </div>
+                    </article>
+                    <!-- card-group-item.// -->
+                </div>
+            </div>
+            <div class="imagDiv">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="container">
+                            <div class="row">
+                                <span id="title1">
+                                    <h3></h3>
+                                </span>
+                                <div class="col-lg-4">
+                                        <img id='recipe-img-1' class='recipe-img' src="http://via.placeholder.com/350x350" name='Chicken Teriyaki'>
+                                </div>
+                                <div class="col-lg-4">
+                                        <img id='recipe-img-2' class='recipe-img' src="http://via.placeholder.com/350x350">
+                                </div>
+                                <div class="col-lg-4">
+                                        <img id='recipe-img-3' class='recipe-img' src="http://via.placeholder.com/350x350">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span id="title2">
+                                    <h3></h3>
+                                </span>
+                                <div class="col-lg-4">
+                                        <img id='recipe-img-4' class='recipe-img' src="http://via.placeholder.com/350x350">
+                                </div>
+                                <div class="col-lg-4">
+                                        <img id='recipe-img-5' class='recipe-img' src="http://via.placeholder.com/350x350">
+                                </div>
+                                <div class="col-lg-4">
+                                        <img id='recipe-img-6' class='recipe-img' src="http://via.placeholder.com/350x350">
+                                </div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-md-3'></div>
+                                <div class='col-md-6' id='player'></div>
+                            </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+                <!-- </div> -->
+                <!-- </div> -->
+               
+                <footer>
+                
+                            <div class="badge" id="edamam-badge" data-color="white"></div>
+                        
+                </footer>
+</body>
+<script type='text/javascript' language='javascript' src='assets/javascript/fttJS.js'></script>
+</html>

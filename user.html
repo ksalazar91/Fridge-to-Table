@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>User - Profile | Fridge to Table </title>
+<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-orange.min.css" />
+        <script src="https://developer.edamam.com/attribution/badge.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+  </head>
+  <body background="assets/css/felt.png">
+        <nav class="demo-navigation mdl-navigation">
+          <a class="mdl-navigation__link" href="user.html"><i class="material-icons">account_circle</i>User Profile</a>
+          <a class="mdl-navigation__link" href="aneesTest.html"><i class="material-icons">restaurant_menu</i>Recipes</a>
+          <div class="mdl-layout-spacer"></div>
+          <a id="show-dialog" class="mdl-navigation__link"><i class="material-icons" role="presentation">cancel</i>Log Out</a>
+            <dialog class="mdl-dialog">
+              <h4 class="mdl-dialog__content">Are you sure you want to log out?</h4>
+              <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button mdl-button--accent" onclick="dialog.close()">No</button>
+                <button type="button" class="mdl-button close">Yes</button>
+              </div>
+            </dialog>
+            <script>
+              var dialog = document.querySelector('dialog');
+              var showDialogButton = document.querySelector('#show-dialog');
+              if (! dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+              }
+              showDialogButton.addEventListener('click', function() {
+                dialog.showModal();
+              });
+              dialog.querySelector('.close').addEventListener('click', function() {
+                window.open('index.html', '_self');
+              });
+            </script>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-50">
+        <div class="mdl-grid demo-content">
+          <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
+          </div>
+          <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid" style="margin-top:-20px">
+            <div class="mdl-layout-spacer"></div>
+              <h4 class="mdl-typography--display-1 mdl-color-text--grey-600 center-items" >Jane Doe</h4>
+            <div class="mdl-layout-spacer"></div>
+          </div>
+          <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid" style="margin-top:-48px">
+            <div class="mdl-layout-spacer"></div>
+              <h6 class="mdl-typography--display-title mdl-color-text--grey-600 center-items">hello@example.com</h6>
+            <div class="mdl-layout-spacer"></div>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
+              <div class="mdl-layout-spacer"></div>
+                <ul class="mdl-list">
+                    <li class="info-title">
+                      <span style="margin-right: 11px;">Gender</span>
+                      <span><button type="button" class="show-modal mdl-button mdl-js-button mdl-button--raised " id="genderButton">Female</button>
+                      </span>
+
+                    <i class="material-icons">expand_more</i>
+
+                      <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                          for="genderButton">
+                        <li class="mdl-menu__item" id='female-button'>Female</li>
+                        <li class="mdl-menu__item" id='male-button'>Male</li>
+                      </ul>
+                  </li>
+                  <li class="info-title">
+                    <span>Dietary Restrictions</span>
+                    <div>
+                      <ul style="list-style-type: none; margin-top: 10px;">
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <span>Milk</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input"/>
+                            <span>Eggs</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <span>Peanuts</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input"/>
+                            <span>Tree nuts</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input"/>
+                            <span>Soy</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input"/>
+                            <span>Wheat</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input"/>
+                            <span>Fish</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox"class="mdl-checkbox__input"/>
+                            <span>Shellfish</span>
+                          </label>
+                        </li>                           
+                      </ul>
+                    </div>
+                  </li>
+
+                </ul>
+              <div class="mdl-layout-spacer"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+     
+
+    <script>
+      var genderText = document.querySelector('#genderButton');
+      var maleButton = document.querySelector('#male-button')
+      var femaleButton = document.querySelector('#female-button');
+      maleButton.addEventListener('click', function(){
+        document.querySelector('#genderButton').innerHTML = "Male";
+      });
+      femaleButton.addEventListener('click', function(){
+        document.querySelector('#genderButton').innerHTML = "Female";
+      });
+    </script>  
+    <a id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Update</a>
+
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </body>
+</html>

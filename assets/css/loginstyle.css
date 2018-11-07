@@ -1,0 +1,22 @@
+body {
+  background-image: url("felt.png");
+}
+  #firebaseui-auth-container {
+  font-size: 40px;
+  padding-top: 200px;
+  display: block;
+  float: center;
+}
+
+header {
+  float: left;
+   margin: 0,0;
+}
+
+h1 {
+  margin-top: 20px;
+  font-style: bold italic;
+  text-align: center;
+  color:rgb(1, 190, 17);
+  font-size: 60px;
+}

@@ -1,0 +1,54 @@
+body {
+    background-image: url("felt.png");
+}  
+#player {
+    margin-bottom: 100px;
+    margin-top: 50px;
+ }
+.navbar {
+    width: 100%;
+    text-align: center;
+    content: center;
+    background-image: url("asset/css/felt.png");
+    height: 100px;
+}
+
+h2 {
+    text-align: center;
+    color:rgb(1, 190, 17);
+}
+
+.sideBar {
+    float: left;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 101%;
+    height: 60px;
+    /* Height of the footer */
+    background: rgb(121, 120, 120);
+}
+
+.imageDiv {
+    position: absolute;
+    margin-left: 240px;
+}
+
+#edamam-badge {
+    margin-left: 465px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+}
+
+.navbar-brand {
+    margin-top: -215px;
+}
