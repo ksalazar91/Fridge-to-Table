@@ -1,18 +1,6 @@
 # Fridge-to-Table
 Group project 1
 
-original web site: https://ashalkey.github.io/Group-Project-1/
-original github: https://github.com/ashalkey/fridge-to-table
-
-ORIGINAL PAGE CANNOT BE FOUND RE-UPLODING. RE-UPLOAD PROJECT CAN BE FOUND ON
-
-web site: https://ksalazar91.github.io/Fridge-to-Table/index.html
-
-prove of collaboration 
-
-![commit](https://github.com/ksalazar91/Fridge-to-Table/blob/master/c.png)
-
-
 # Demo link
 https://drive.google.com/file/d/1sxxIVeFJzmLPT324V9nFEMtMmX_NNNG3/view
 
@@ -26,7 +14,7 @@ The app will start with a login menu.
 
 once the user is authenticated it will than redirect to the home page. 
 
-![mainpage](https://github.com/ksalazar91/Fridge-to-Table/blob/master/maingpage.png)
+![mainpage](https://github.com/ksalazar91/Fridge-to-Table/blob/master/mainpage.png)
 
 # Group Members: 
    
@@ -35,3 +23,15 @@ once the user is authenticated it will than redirect to the home page.
    2) Karen Salazar - Backend Developer. In charge of recipe API. Uses Ajax to access api and get the recipe information.
                       The ingridiantes are than obtain on an array
 
+
+# Deployment 
+original web site: https://ashalkey.github.io/Group-Project-1/
+original github: https://github.com/ashalkey/fridge-to-table
+
+ORIGINAL PAGE CANNOT BE FOUND RE-UPLODING. RE-UPLOAD PROJECT CAN BE FOUND ON
+
+web site: https://ksalazar91.github.io/Fridge-to-Table/index.html
+
+prove of collaboration 
+
+![commit](https://github.com/ksalazar91/Fridge-to-Table/blob/master/c.png)
