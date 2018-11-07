@@ -12,7 +12,9 @@ The app will start with a login menu.
 
 ![Initial](https://github.com/ksalazar91/Fridge-to-Table/blob/master/login.png)
 
-once the user is authenticated it will than redirect to the home page. 
+
+once the user is authenticated it will than redirect to the home page. There the user will search for ingredients, then the top 6 options will be display .
+After the main page is populate, the user will have the opton of viewing the recipe on youtube. 
 
 ![mainpage](https://github.com/ksalazar91/Fridge-to-Table/blob/master/mainpage.png)
 
@@ -21,7 +23,9 @@ once the user is authenticated it will than redirect to the home page.
    1) Alan Shalkey - Project Manager and Backend. In charge of Youtbe API and Firebase Authentication.
 
    2) Karen Salazar - Backend Developer. In charge of recipe API. Uses Ajax to access api and get the recipe information.
-                      The ingridiantes are than obtain on an array
+                      An array 
+
+   3) Anees Abdulgasem - Front End. In charge of Main page and login design.
 
 
 # Deployment 
