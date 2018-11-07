@@ -13,8 +13,8 @@ The app will start with a login menu.
 ![Initial](https://github.com/ksalazar91/Fridge-to-Table/blob/master/login.png)
 
 
-once the user is authenticated it will than redirect to the home page. There the user will search for ingredients, then the top 6 options will be display .
-After the main page is populate, the user will have the opton of viewing the recipe on youtube. 
+Once the user is authenticated it will then redirect to the home page. There the user will search for ingredients, then the top 6 options will be display .
+After the main page is populate, the user will have the option of viewing the recipe on youtube. 
 
 ![mainpage](https://github.com/ksalazar91/Fridge-to-Table/blob/master/mainpage.png)
 
@@ -27,6 +27,7 @@ After the main page is populate, the user will have the opton of viewing the rec
 
    3) Anees Abdulgasem - Front End. In charge of Main page and login design.
 
+   4) Julianne Hall - Front End. Code support 
 
 # Deployment 
 original web site: https://ashalkey.github.io/Group-Project-1/
